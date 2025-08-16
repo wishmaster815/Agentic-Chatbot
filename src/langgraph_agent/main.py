@@ -40,7 +40,7 @@ def load_langgraph_agentic_ai_app():
             # graph buider
             builder =  graph_builder(model=model)
             try:
-                graph=graph_builder.setup_graph(usecase)
+                graph=builder.setup_graph(usecase)
                 
                 DisplayResultStreamlit(usecase,graph,user_message).display_result_on_ui()
             except Exception as e:

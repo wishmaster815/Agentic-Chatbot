@@ -14,7 +14,7 @@ class graph_builder():
         entry and exit point of the graph.
         """
         
-        self.basic_chatbot = chatbot_node()
+        self.basic_chatbot = chatbot_node(model = self.llm)
         self.graph_builder.add_node("chatbot",self.basic_chatbot.process)
         self.graph_builder.add_edge(START, "chatbot")
         self.graph_builder.add_edge("chatbot", END)
